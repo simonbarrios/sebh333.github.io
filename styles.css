@@ -1,0 +1,279 @@
+html{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color: cornflowerblue;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    height: 4.375rem;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    box-shadow: 0 8px 8px -4px black;
+}
+
+.header h1{
+    font-family: 'Dancing Script', cursive;
+    margin-left: 2rem;
+    transition: all 0.5s;
+}
+
+.header h1 a{
+    text-decoration: none;
+    color: cornflowerblue;
+    transition: all 0.5s;
+}
+
+.header h1:hover{
+    transform: scale(1.2);
+    text-shadow: cornflowerblue 1px 0 10px;
+    color: white;
+}
+
+.header h1 a:hover{
+    text-decoration: none;
+    color: white
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar li{
+    display: inline-block;
+    padding: 0 1.5rem;
+    transition: all 0.5s;
+    background: linear-gradient(cornflowerblue 0 0) calc(100% - var(--p,0%)) / var(--p,0%) no-repeat;
+    border-radius: 0.3125rem;
+}
+
+.navbar li:hover{
+    transform: scale(1.1);
+    --p: 100%;
+}
+
+.navbar li a{
+    text-decoration: none;
+}
+
+.navbar li a:hover{
+    color: white;
+}
+
+.navbar li button{
+    font-weight: bold;
+    font-size: 1.15rem;
+    color: cornflowerblue;
+    border: 0.125rem solid;
+    border-radius: 3.125rem;
+    border-color: cornflowerblue;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    padding: 0.2rem 1.5625rem;
+}
+
+.navbar li button:hover{
+    padding: 0.25rem 1.5625rem;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content1{
+    max-width: 100%;
+    background-color: white;
+    width: 37.5rem;
+    height: 14.75rem;
+    border-radius: 0.3125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    box-shadow: 0 8px 8px -4px black;
+}
+
+.content1 h2 {
+    font-weight: bold;
+}
+
+.content2{
+    max-width: 100%;
+}
+
+
+.services{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75rem;
+    height: 37.5rem;
+    flex-wrap: wrap;
+    padding: 7.125 rem 3.125rem;;
+}
+
+.service{
+    background-color: white;
+    border: 0.125rem solid;
+    border-color: white;
+    border-radius : 0.3125rem;
+    box-shadow: 0 8px 8px -4px black;
+}
+
+.service img{
+    width: 18.75rem;
+    height: 18.75rem;
+}
+
+.service p{
+    font-weight: bold;
+    transition: all 0.5s;
+    width: auto;
+    padding: 0;
+    background: linear-gradient(cornflowerblue 0 0) calc(100% - var(--p,0%)) / var(--p,0%) no-repeat;
+    cursor: pointer;
+}
+
+.service p:hover{
+    --p:100%;
+}
+
+#team-container{
+    max-width: 100%;
+    background-color: white;
+    width: 75rem;
+    height: 37.5rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0 8px 8px -4px black;
+}
+
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-member{
+    background-color: white;
+    border: 0.125rem solid;
+    border-color: white;
+    border-radius : 0.3125rem;
+    box-shadow: 0 8px 8px -4px black;
+    margin-top: 2rem;
+
+}
+
+.team-member img{
+    width: 18.75rem;
+    height: 18.75rem;
+}
+
+#contact{
+   margin-top: 7rem; 
+   color: white;
+   text-shadow: black 1px 0 10px;
+}
+
+#contact h2{
+    font-family:'Dancing Script', cursive;
+}
+
+.copyright h5{
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 800px){
+    html,body{
+        overflow-x: hidden;
+    }
+
+    .header{
+        width: 100%;
+    }
+    .navbar{
+        display: none;
+    }
+
+    .content1{
+        width: 20rem;
+    }
+
+    .content2{
+        margin-top: 2rem;
+    }
+    
+    .services{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service{
+        overflow: hidden;
+        max-width: 20rem;
+        max-height: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        border-radius: 0;
+    }
+
+    .service img{
+        width: 60%;
+        height: 80%;
+        flex-shrink: 1;
+    }
+
+    #team-container{
+        width: max-content;
+        height: max-content;
+        margin-top: 2rem;
+    }
+
+    .team{
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0;
+    }
+
+    .team-member{
+        overflow: hidden;
+        max-width: 20rem;
+        max-height: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .team-member img{
+        width: 60%;
+        height: 80%;
+        flex-shrink: 1;
+    }
+}
